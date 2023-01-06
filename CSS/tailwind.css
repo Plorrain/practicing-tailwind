@@ -8,10 +8,16 @@ OR we can put it inside @layer components after */
 
 @layer components {
   .btn {
-    @apply inline-block px-5 py-3 rounded-lg transform transition
-    bg-indigo-500 hover:bg-indigo-400 hover:-translate-y-0.5
-    focus:outline-none focus:ring focus:ring-offset-2 focus:ring-indigo-500
-    focus:ring-opacity-50 active:bg-indigo-600 uppercase tracking-wider font-semibold
-    text-sm text-white shadow-lg sm:text-base
+    @apply inline-block px-5 py-3 rounded-lg focus:outline-none focus:ring
+    focus:ring-offset-2 uppercase tracking-wider font-semibold text-sm sm:text-base;
+  }
+
+  .btn-primary {
+    @apply bg-indigo-500 hover:bg-indigo-400 focus:ring-indigo-500
+   active:bg-indigo-600 text-white focus:ring-opacity-50;
+  }
+  .btn-secondary {
+    @apply bg-gray-300 hover:bg-gray-200 focus:ring-gray-300
+   active:bg-gray-400 text-gray-800 focus:ring-opacity-50;
   }
 }

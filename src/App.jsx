@@ -51,6 +51,7 @@ const App = () => {
         </p>
         {/* cards */}
         <div className="mt-6 grid gap-6 lg:grid:cols-2 xl:grid-cols-3">
+          {/* Toronto */}
           <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
             <img
               className="h-32 w-32 flex-shrink-0"
@@ -66,6 +67,106 @@ const App = () => {
                   className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm"
                 >
                   Explore 76 properties
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* chicago */}
+          <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
+            <img
+              className="h-32 w-32 flex-shrink-0"
+              src="./images/chicago.jpg"
+              alt="Chicago skyline"
+            />
+            <div className="px-6 py-4">
+              <h3 className="text-lg font-semibold text-gray-800">Chicago</h3>
+              <p className="text-gray-600">$215 / night average</p>
+              <div className="mt-4">
+                <a
+                  href="/"
+                  className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm"
+                >
+                  Explore 115 properties
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* colorado */}
+          <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
+            <img
+              className="h-32 w-32 flex-shrink-0"
+              src="./images/colorado.jpg"
+              alt="Colorado skyline"
+            />
+            <div className="px-6 py-4">
+              <h3 className="text-lg font-semibold text-gray-800">Colorado</h3>
+              <p className="text-gray-600">$110 / night average</p>
+              <div className="mt-4">
+                <a
+                  href="/"
+                  className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm"
+                >
+                  Explore 50 properties
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* malibu */}
+          <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
+            <img
+              className="h-32 w-32 flex-shrink-0"
+              src="./images/malibu.jpg"
+              alt="Malibu skyline"
+            />
+            <div className="px-6 py-4">
+              <h3 className="text-lg font-semibold text-gray-800">Malibu</h3>
+              <p className="text-gray-600">$250 / night average</p>
+              <div className="mt-4">
+                <a
+                  href="/"
+                  className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm"
+                >
+                  Explore 130 properties
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* miami */}
+          <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
+            <img
+              className="h-32 w-32 flex-shrink-0"
+              src="./images/miami.jpg"
+              alt="Miami skyline"
+            />
+            <div className="px-6 py-4">
+              <h3 className="text-lg font-semibold text-gray-800">Miami</h3>
+              <p className="text-gray-600">$220 / night average</p>
+              <div className="mt-4">
+                <a
+                  href="/"
+                  className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm"
+                >
+                  Explore 156 properties
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* seattle */}
+          <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
+            <img
+              className="h-32 w-32 flex-shrink-0"
+              src="./images/seattle.jpg"
+              alt="Seattle skyline"
+            />
+            <div className="px-6 py-4">
+              <h3 className="text-lg font-semibold text-gray-800">Seattle</h3>
+              <p className="text-gray-600">$170 / night average</p>
+              <div className="mt-4">
+                <a
+                  href="/"
+                  className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm"
+                >
+                  Explore 34 properties
                 </a>
               </div>
             </div>

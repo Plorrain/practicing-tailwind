@@ -4,9 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: "#0FA9E6",
-        "brand-light": "#3fbaeb",
-        "brand-dark": "#0C87B8",
+        brand: {
+          DEFAULT:"#0FA9E6",
+          light:"#3fbaeb",
+          dark:"#0C87B8",
+        }
+      },
+      fontFamily: {
+        headline: "Poppins, sans-serif",
       },
     },
   },

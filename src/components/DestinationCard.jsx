@@ -16,7 +16,7 @@ const DestinationCard = ({ destination }) => {
         <div className="mt-4">
           <a
             href="/"
-            className="text-brand hover:text-brand-400 font-semibold text-sm"
+            className="text-brand-dark hover:text-brand font-semibold text-sm"
           >
             Explore {destination.propertyCount} properties
           </a>

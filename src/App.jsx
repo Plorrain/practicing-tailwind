@@ -17,12 +17,11 @@ const App = (props) => {
             <img
               className="mt-6 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden"
               src="/images/beach-work.jpg"
-              alt="Woman worcationing on the beach"
+              alt="Woman workcationing on the beach"
             />
-            <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">
+            <h1 className="mt-6 text-2xl font-headline tracking-tight font-semibold text-gray-900 sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">
               You can work from anywhere.
-              <br className="hidden lg:inline" />
-              <span className="text-brand">Take advantage of it.</span>
+              <br className="hidden lg:inline" /> <span className="text-brand">Take advantage of it.</span>
             </h1>
             <p className="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
               Workcation helps you find work-friendly rentals in beautiful
@@ -33,10 +32,10 @@ const App = (props) => {
               <a
                 className="inline-block px-5 py-3 rounded-lg transform transition bg-brand
                 hover:bg-brand-light hover:-translate-y-0.5 focus:ring-brand focus:ring-opacity-50 focus:outline-none focus:ring
-                focus:ring-offset-2 active:bg-brand-dark uppercase
+                active:bg-brand-dark focus:ring-offset-2 uppercase
                 tracking-wider font-semibold text-sm text-white shadow-lg sm:text-base"
                 // active:bg-brand-dark not working dont know why
-                href="#"
+                href="/"
               >
                 Book your escape
               </a>

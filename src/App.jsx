@@ -1,6 +1,8 @@
 import React from "react";
 
-const App = () => {
+import popularDestinations from "./data/popularDestinations";
+
+const App = (props) => {
   return (
     <div>
       <div className="bg-gray-100 grid lg:grid-cols-2 2xl:grid-cols-5">
@@ -49,128 +51,31 @@ const App = () => {
           A selection of great work-friendly cities with lots to see and
           explore.
         </p>
+
         {/* cards */}
         <div className="mt-6 grid gap-6 lg:grid:cols-2 xl:grid-cols-3">
-          {/* Toronto */}
-          <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-            <img
-              className="h-32 w-32 flex-shrink-0"
-              src="./images/toronto.jpg"
-              alt="Toronto skyline"
-            />
-            <div className="px-6 py-4">
-              <h3 className="text-lg font-semibold text-gray-800">Toronto</h3>
-              <p className="text-gray-600">120 / night average</p>
-              <div className="mt-4">
-                <a
-                  href="/"
-                  className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm"
-                >
-                  Explore 76 properties
-                </a>
+          {popularDestinations.map((destination) => (
+            // <p>{destination.city}</p>
+            <div key={destination.city} className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
+              <img
+                className="h-32 w-32 flex-shrink-0"
+                src={destination.imageUrl}
+                alt={destination.imageAlt}
+              />
+              <div className="px-6 py-4">
+                <h3 className="text-lg font-semibold text-gray-800">{props.key}</h3>
+                <p className="text-gray-600">${destination.averagePrice} / night average</p>
+                <div className="mt-4">
+                  <a
+                    href="/"
+                    className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm"
+                  >
+                   Explore {destination.propertyCount} properties
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          {/* chicago */}
-          <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-            <img
-              className="h-32 w-32 flex-shrink-0"
-              src="./images/chicago.jpg"
-              alt="Chicago skyline"
-            />
-            <div className="px-6 py-4">
-              <h3 className="text-lg font-semibold text-gray-800">Chicago</h3>
-              <p className="text-gray-600">$215 / night average</p>
-              <div className="mt-4">
-                <a
-                  href="/"
-                  className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm"
-                >
-                  Explore 115 properties
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* colorado */}
-          <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-            <img
-              className="h-32 w-32 flex-shrink-0"
-              src="./images/colorado.jpg"
-              alt="Colorado skyline"
-            />
-            <div className="px-6 py-4">
-              <h3 className="text-lg font-semibold text-gray-800">Colorado</h3>
-              <p className="text-gray-600">$110 / night average</p>
-              <div className="mt-4">
-                <a
-                  href="/"
-                  className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm"
-                >
-                  Explore 50 properties
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* malibu */}
-          <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-            <img
-              className="h-32 w-32 flex-shrink-0"
-              src="./images/malibu.jpg"
-              alt="Malibu skyline"
-            />
-            <div className="px-6 py-4">
-              <h3 className="text-lg font-semibold text-gray-800">Malibu</h3>
-              <p className="text-gray-600">$250 / night average</p>
-              <div className="mt-4">
-                <a
-                  href="/"
-                  className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm"
-                >
-                  Explore 130 properties
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* miami */}
-          <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-            <img
-              className="h-32 w-32 flex-shrink-0"
-              src="./images/miami.jpg"
-              alt="Miami skyline"
-            />
-            <div className="px-6 py-4">
-              <h3 className="text-lg font-semibold text-gray-800">Miami</h3>
-              <p className="text-gray-600">$220 / night average</p>
-              <div className="mt-4">
-                <a
-                  href="/"
-                  className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm"
-                >
-                  Explore 156 properties
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* seattle */}
-          <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-            <img
-              className="h-32 w-32 flex-shrink-0"
-              src="./images/seattle.jpg"
-              alt="Seattle skyline"
-            />
-            <div className="px-6 py-4">
-              <h3 className="text-lg font-semibold text-gray-800">Seattle</h3>
-              <p className="text-gray-600">$170 / night average</p>
-              <div className="mt-4">
-                <a
-                  href="/"
-                  className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm"
-                >
-                  Explore 34 properties
-                </a>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

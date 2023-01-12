@@ -1,5 +1,6 @@
 import React from "react";
 
+import DestinationCard from "./components/DestinationCard";
 import popularDestinations from "./data/popularDestinations";
 
 const App = (props) => {
@@ -55,26 +56,7 @@ const App = (props) => {
         {/* cards */}
         <div className="mt-6 grid gap-6 lg:grid:cols-2 xl:grid-cols-3">
           {popularDestinations.map((destination) => (
-            // <p>{destination.city}</p>
-            <div key={destination.city} className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-              <img
-                className="h-32 w-32 flex-shrink-0"
-                src={destination.imageUrl}
-                alt={destination.imageAlt}
-              />
-              <div className="px-6 py-4">
-                <h3 className="text-lg font-semibold text-gray-800">{props.key}</h3>
-                <p className="text-gray-600">${destination.averagePrice} / night average</p>
-                <div className="mt-4">
-                  <a
-                    href="/"
-                    className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm"
-                  >
-                   Explore {destination.propertyCount} properties
-                  </a>
-                </div>
-              </div>
-            </div>
+            <DestinationCard destination={destination} key={destination.city} />
           ))}
         </div>
       </div>
